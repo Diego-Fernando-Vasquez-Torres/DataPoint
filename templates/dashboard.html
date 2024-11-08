@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - ERP{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3">
+    <h1 class="welcome-text">¡Bienvenido, Seving!</h1>
+    <div>
+        <span class="mr-3">Seving Aslanova</span>
+        <img src="{{ url_for('static', filename='img/profile_placeholder.png') }}" class="rounded-circle" alt="Imagen de Perfil">
+    </div>
+</div>
+
+<!-- Tarjetas de Indicadores Clave de Desempeño (KPI) -->
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card p-3">
+            <h5>Ganancias Totales</h5>
+            <p>₦100,000</p>
+            <small>Indicador de 1 mes</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card p-3">
+            <h5>Total de Productos Vendidos</h5>
+            <p>3,400</p>
+            <small>Indicador de 1 mes</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card p-3">
+            <h5>Categoría Más Vendida</h5>
+            <p>Electrónica</p>
+            <small>Indicador de 1 mes</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card p-3">
+            <h5>Producto Más Vendido</h5>
+            <p>iPhone 15 Pro</p>
+            <small>Indicador de 1 mes</small>
+        </div>
+    </div>
+</div>
+
+<!-- Tabla de Ventas y Gráfico -->
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <div class="card p-3">
+            <h5>Ventas</h5>
+            <table class="table table-borderless mt-3">
+                <thead>
+                    <tr>
+                        <th>Nombre del Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MacBook Pro</td>
+                        <td>2</td>
+                        <td>2,999 AZN</td>
+                        <td>20.09.2024</td>
+                    </tr>
+                    <tr>
+                        <td>MacBook Air</td>
+                        <td>4</td>
+                        <td>1,499 AZN</td>
+                        <td>18.09.2024</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15 Pro</td>
+                        <td>15</td>
+                        <td>3,999 AZN</td>
+                        <td>18.09.2024</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15 Pro Max</td>
+                        <td>10</td>
+                        <td>4,499 AZN</td>
+                        <td>18.09.2024</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15</td>
+                        <td>12</td>
+                        <td>1,989 AZN</td>
+                        <td>17.09.2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <div class="card p-3">
+            <h5>Gráfico de Ventas</h5>
+            <!-- Placeholder para el gráfico -->
+            <div class="chart-placeholder" style="height: 200px; background-color: #cce7ff; border-radius: 8px;">
+                <p class="text-center pt-5">Aquí va el gráfico</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
